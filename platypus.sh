@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PLAY_ARGS='-Dsbt.log.noformat=true -DapplyEvolutions.default=true -Dhttp.port=9000'
+PLAY_ARGS='-Dsbt.log.noformat=true -Dhttp.port=9000'
 OUTPUT_TYPE='Text Window'
 ICON_FILENAME='icon.icns'
 
