@@ -1,9 +1,7 @@
-play-platypus
+play-platypus [![Build Status](https://travis-ci.org/danielnixon/play-platypus.svg?branch=master)](https://travis-ci.org/danielnixon/play-platypus)
 =============
 
 Package a [Play Framework](http://www.playframework.com/) app for OS X using [Platypus](http://sveinbjorn.org/platypus).
-
-[![Build Status](https://travis-ci.org/danielnixon/play-platypus.svg?branch=master)](https://travis-ci.org/danielnixon/play-platypus)
 
 Usage
 -----
