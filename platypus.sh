@@ -15,12 +15,12 @@ DMG_NAME="$APP_NAME-$VERSION"
 cd ./target/universal/
 
 # Remove previous DMG image if it exists.
-rm -f $DMG_NAME.dmg
-rm -rf $DMG_NAME
+rm -f "$DMG_NAME.dmg"
+rm -rf "$DMG_NAME"
 
 # Create app bundle.
-tar -zxvf $DMG_NAME.tgz
-cd $DMG_NAME
+tar -zxvf "$DMG_NAME.tgz"
+cd "$DMG_NAME"
 printf "%s\n%s%s\n" '#!/bin/sh' './bin/' "$APP_NAME $PLAY_ARGS" > run.sh
 
 if [ -f ../../../$ICON_FILENAME ]; then
@@ -30,12 +30,12 @@ else
   ICON_ARG=""
 fi
 
-mkdir $APP_NAME
-ln -s /Applications $APP_NAME/Applications
+mkdir "$APP_NAME"
+ln -s /Applications "$APP_NAME/Applications"
 platypus -V "$VERSION" -a "$APP_NAME" -o "$OUTPUT_TYPE" $ICON_ARG -f bin -f conf -f lib run.sh "$APP_NAME/$APP_NAME.app"
 
 # Create DMG image.
-hdiutil create -srcfolder $APP_NAME ../$DMG_NAME.dmg
+hdiutil create -srcfolder "$APP_NAME" "../$DMG_NAME.dmg"
 
 # Clean up.
-rm -rf ../$DMG_NAME
+rm -rf "../$DMG_NAME"
