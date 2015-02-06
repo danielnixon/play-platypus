@@ -5,6 +5,7 @@ OUTPUT_TYPE='Text Window'
 ICON_FILENAME='icon.icns'
 
 set -e
+set -u
 
 command -v platypus >/dev/null 2>&1 || { echo "Platypus is required but not installed." >&2; exit 1; }
 
