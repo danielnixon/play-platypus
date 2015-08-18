@@ -1,3 +1,8 @@
 language: bash
+sudo: false
+addons:
+  apt:
+    packages:
+    - shellcheck
 script:
-    - bash -n platypus.sh
+   - shellcheck ./*.sh
